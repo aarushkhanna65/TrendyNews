@@ -1,0 +1,36 @@
+.newsbody{
+    padding: 0 6rem;
+}
+.news-hero-text {
+    line-height: 1;
+    margin-top: 2rem;
+}
+.news-hero-text p{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.news-hero-text h1 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+} 
+
+.articles {
+    margin: 30px 0;
+    font-size: 1.2rem;
+} 
+
+.subheading{
+    opacity: 0.6;
+}
+@media (max-width: 1080px){
+    .newsbody {
+        padding: 0 2rem;
+        overflow: scroll;
+    }
+    .news-hero-text h1 {
+        font-size: 2rem;
+    }
+}
+

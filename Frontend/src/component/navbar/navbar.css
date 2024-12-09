@@ -1,0 +1,127 @@
+.navbar{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.402);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 6vw;
+    z-index: 1;
+    width: 88%;
+    color: white;
+}
+.nav-logo{
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+.nav-link{
+    height: 100%;
+}
+.nav-link ul {
+    display: flex;
+    gap: 6rem;
+}
+.nav-link li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.support-btn{
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    height: 34px;
+    padding: 3px 5px;
+    color: #fff;
+    border-radius: 1px;
+    border: 1px solid #ff0000;
+    transition: all .3s ease;
+    background: #ff0000;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 16px;
+    font-size: 0.8em;
+}
+
+.support-btn:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: black;
+}
+.hamburger{
+    background-color: transparent;
+    font-size: 1.5rem
+}
+.hamburger:hover{
+    cursor:pointer ;
+}
+
+.menu-buttons{
+    display: none;
+}
+@media (max-width:600px){
+    .nav-bar{
+        padding: 0 2vw;
+    }
+    .nav-logo{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width:1080px){
+    .hamburger{
+        display: block;
+    }
+    .nav-link {
+        width: 100%;
+        display: none;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar.opened-tab{
+        animation: slide-in 0.5s;
+        background-color: white;
+        color: black;
+    }
+    .nav-link ul {
+        width: 100%;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    .nav-link ul li a{
+        font-size: smaller;
+        padding: 0;
+    }
+    .nav-link.responsive-nav {
+        display: flex;
+        align-items: flex-start;
+    }
+    .navtitles {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }  
+    .menu-buttons{
+        display: block;
+        background-color: transparent;
+        font-size: 1.5rem
+    }
+    .support-btn{
+        padding: 0;
+        height: auto;
+        border: none;
+        background-color: white;
+        color: black;
+    }
+}
+@keyframes slide-in {
+    0% {
+      -webkit-transform: translateY(-100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+    }
+  }

@@ -1,0 +1,257 @@
+
+.main{
+    padding-top: vh;
+    padding-bottom: 4vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.heading-p{
+    width: 50%;
+}
+.select{
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    max-height: 8vh;
+}
+.select h2 {
+    font-weight: 300;
+    margin: 0;
+    
+}
+.select select{
+    padding: 2px 0.5rem;
+}
+
+.content-wrap{
+    width: max(60%, 700px);
+}
+
+.sidebar{
+    margin-top: 8vh;
+    width: 250px;
+}
+.gradient{
+    width: 50%;
+}
+.gradient img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column ;
+    max-width: min(250px, 18%);
+}
+
+.news_card{
+    margin-bottom: 2rem;
+}
+
+.news_card h3{
+    margin: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 10px solid aliceblue;
+    margin: 1em 0;
+    margin-top: 0.2em;
+    padding: 0;
+    width: 10%;
+    transition: width 0.5s ease-out;
+    background-color: aliceblue;
+}
+
+.itemwrap2 hr{
+    margin-left: auto;
+}
+
+.item:hover hr{
+    width: 40%;
+}
+
+.item h2{
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+.itemwrap1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 2%;
+}
+
+.itemwrap2 > .heading-p{
+    text-align: end;
+}
+
+.itemwrap2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 2%;
+    flex-direction: row-reverse;
+}
+
+.loading-wrap{
+    display: flex;
+    justify-content: center;
+}
+
+#loadmore {
+    width: 150px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: black;
+    transition: .3s;
+}
+
+#loadmore:hover {
+    color:black;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid lightblue;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: lightblue transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1200px){
+
+    .main{
+        width: 96%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1080px){
+    .content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 432px){
+    .item h2{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .main{
+        width: 100%;
+    }
+    .content-wrap{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+        gap: 0;
+    }
+    .itemwrap1, .itemwrap2{
+        flex-direction: column;        
+    }
+    .gradient {
+        width: 100%; 
+    }
+    
+    .gradient::after {
+        display: block;
+        position: relative;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);        margin-top: -150px;
+        height: 150px;
+        width: 100%;
+        content: '';
+    }
+    .catog{
+        display: none;
+    }
+    .heading-p{
+        width: 90%;
+        height: 60%;
+        color: white;
+        padding-left: 5%;
+        padding-right: 5%;
+        z-index: 1;
+        background-color:  black;
+        padding-bottom: 3vh;
+    }
+    .itemwrap2 .heading-p{
+        text-align: left;
+    }
+    hr{
+        display: none;
+    }
+    .heading-p h2{
+       font-size: 1.5rem;
+       margin-bottom: 1rem;
+    }
+    .heading-p p{
+        font-size: 1.1rem;
+        color: rgb(191, 191, 191);
+        margin: 0;
+
+     }
+    .select{
+        margin-left: 20px;
+        font-size: 0.6rem;
+    }
+
+}
